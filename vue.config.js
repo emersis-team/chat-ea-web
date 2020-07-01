@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "/chat-ea-web/dist/",
+  publicPath: process.env.NODE_ENV === "production" ? "/chat-ea-web/" : "/",
 };
