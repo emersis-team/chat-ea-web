@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: "/public/",
+  publicPath: "/dist/",
   devServer: {
     open: process.platform === "darwin",
     host: "0.0.0.0",
