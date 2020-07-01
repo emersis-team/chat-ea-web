@@ -1,19 +1,16 @@
-#!/usr/bin/env sh
-
 # abort on errors
 set -e
-
 # build
+echo Linting..
+npm run lint
+echo Building. this may take a minute…
 npm run build
-
-# navigate into the build output directory
-cd dist
-
-git init
+# if you are deploying to a custom domain add a CNAME (uncomment the next 3 lines)
+#cd docs
+#echo ‘yourcustomdomain.com’ > CNAME
+#cd -
+# deploy
+echo Deploying..
 git add -A
-git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:emersis-team/chat-ea-web.git master:gh-pages
-
-cd -
+git commit -m ‘deploy’
+git push -f https://github.com/jgarciapolak/chat-ea-web.git master
