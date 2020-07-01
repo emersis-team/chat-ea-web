@@ -2,8 +2,7 @@
   <transition name="fade-fast">
     <div class="snackbar" v-show="mostrarSnackbar == true">
       <p class="snackbar-texto">
-        {{ texto
-        }}
+        {{ texto }}
       </p>
     </div>
   </transition>

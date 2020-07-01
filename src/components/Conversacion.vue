@@ -19,7 +19,7 @@ export default {
   computed: {},
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>
 

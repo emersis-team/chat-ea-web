@@ -14,14 +14,17 @@
           :key="conversacion.id"
           @click="elegirConversacion(conversacion)"
           v-bind:class="{
-            'home-conversacion-elegida': conversacion == conversacionElegida,
+            'home-conversacion-elegida': conversacion == conversacionElegida
           }"
         >
           <Conversacion :conversacion="conversacion"></Conversacion>
         </div>
       </div>
       <div class="home-right">
-        <Chat v-if="conversacionElegida != null" :conversacion="conversacionElegida"></Chat>
+        <Chat
+          v-if="conversacionElegida != null"
+          :conversacion="conversacionElegida"
+        ></Chat>
       </div>
     </div>
   </div>
