@@ -57,10 +57,7 @@ export default {
         .then(function(response) {
           that.mensajes = response.data.messages.data;
         })
-        .catch(function() {
-          that.errorUsuario = true;
-          that.errorPassword = true;
-        });
+        .catch(function() {});
     },
     enviar() {
       var texto = this.$refs.inputTexto.value;
